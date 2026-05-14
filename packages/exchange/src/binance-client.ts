@@ -60,6 +60,11 @@ export class BinanceClient {
     return prices;
   }
 
+  async getTicker24hr(): Promise<any[]> {
+    const response = await axios.get(`${this.baseUrl}/api/v3/ticker/24hr`);
+    return response.data;
+  }
+
   async getPortfolio(): Promise<Asset[]> {
     const [balances, prices] = await Promise.all([this.getBalances(), this.getTickerPrices()]);
     

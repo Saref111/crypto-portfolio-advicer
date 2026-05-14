@@ -15,10 +15,12 @@
     "@crypto-portfolio/core": "workspace:*",
     "@crypto-portfolio/exchange": "workspace:*",
     "@prisma/client": "^4.16.0",
+    "bullmq": "^5.76.8",
+    "dotenv": "latest",
     "fastify": "latest",
     "fastify-plugin": "latest",
-    "zod": "latest",
-    "dotenv": "latest"
+    "ioredis": "^5.10.1",
+    "zod": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",

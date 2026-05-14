@@ -26,7 +26,7 @@ export class BinanceService {
 
     return {
       totalValue: snapshot.totalValue,
-      assets: snapshot.assets.map(a => ({
+      assets: snapshot.assets.map((a: any) => ({
         symbol: a.symbol,
         amount: a.amount,
         price: a.price,

@@ -29,3 +29,32 @@ export interface ApiResponse<T> {
   data?: T;
   error?: string;
 }
+
+export const MarketDataSchema = z.object({
+  symbol: z.string(),
+  price: z.number(),
+  priceChangePercent: z.number(),
+});
+
+export type MarketData = z.infer<typeof MarketDataSchema>;
+
+export const PortfolioHistoryEntrySchema = z.object({
+  timestamp: z.date(),
+  totalValue: z.number(),
+});
+
+export type PortfolioHistoryEntry = z.infer<typeof PortfolioHistoryEntrySchema>;
+
+export const PortfolioAnalyticsSchema = z.object({
+  totalValueUsd: z.number(),
+  totalValueBtc: z.number(),
+  pnl24h: z.number(),
+  pnl24hPercent: z.number(),
+  allocations: z.array(z.object({
+    symbol: z.string(),
+    percentage: z.number(),
+    value: z.number(),
+  })),
+});
+
+export type PortfolioAnalytics = z.infer<typeof PortfolioAnalyticsSchema>;
