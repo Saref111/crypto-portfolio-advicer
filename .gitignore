@@ -1,0 +1,35 @@
+**/node_modules
+**/.env
+**/dist
+*/.next/
+
+# Next.js build output
+apps/web/.next/
+**/.next/
+
+# Turbo / build cache
+.turbo/
+**/.turbo/
+
+# Local env files
+**/.env.local
+**/.env.development
+**/.env.production
+**/.env.test
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+
+# OS / editor
+.DS_Store
+*.swp
+*.tmp
+
+# Optional editor folders
+.vscode/

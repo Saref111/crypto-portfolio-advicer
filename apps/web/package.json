@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@crypto-portfolio/core": "workspace:*",
-    "next": "15.0.0",
-    "react": "19.0.0-rc-6032830a-20241029",
-    "react-dom": "19.0.0-rc-6032830a-20241029",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "lucide-react": "latest",
     "clsx": "latest",
     "tailwind-merge": "latest",
