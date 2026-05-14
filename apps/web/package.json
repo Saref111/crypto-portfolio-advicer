@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "@crypto-portfolio/core": "workspace:*",
+    "clsx": "latest",
+    "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest",
-    "clsx": "latest",
+    "recharts": "latest",
     "tailwind-merge": "latest",
-    "recharts": "latest"
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@types/node": "latest",

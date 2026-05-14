@@ -34,4 +34,13 @@ export class PortfolioRepository {
       },
     });
   }
+
+  async getHistory() {
+    return this.prisma.portfolioSnapshot.findMany({
+      orderBy: {
+        timestamp: 'asc',
+      },
+      take: 100, // Limit history
+    });
+  }
 }
