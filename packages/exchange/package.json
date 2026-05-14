@@ -1,0 +1,19 @@
+{
+  "name": "@crypto-portfolio/exchange",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@crypto-portfolio/core": "workspace:*",
+    "axios": "latest",
+    "crypto-js": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/crypto-js": "latest"
+  }
+}

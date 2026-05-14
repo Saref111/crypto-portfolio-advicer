@@ -1,0 +1,25 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model PortfolioSnapshot {
+  id          String   @id @default(uuid())
+  timestamp   DateTime @default(now())
+  totalValue  Float
+  assets      Asset[]
+}
+
+model Asset {
+  id                  String             @id @default(uuid())
+  symbol              String
+  amount              Float
+  price               Float
+  value               Float
+  portfolioSnapshotId String
+  portfolioSnapshot   PortfolioSnapshot  @relation(fields: [portfolioSnapshotId], references: [id])
+}
